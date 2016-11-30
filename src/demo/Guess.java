@@ -54,14 +54,12 @@ public class Guess {
         -1 - Your number is lower than the lucky number
         999 - Your have tried 3 times, you cannot try again
      */
-        public int guess(String nric, int value) {
+    public int guess(String nric, int value) {
 
 
-            if(!checkDate()){
+        if (!checkDate()) {
             reset();
         }
-
-
 
 
         this.nric = nric;
@@ -94,28 +92,28 @@ public class Guess {
             reset();
             return 0;
         }
-}
+    }
 
-    public void reset(){
+    public void reset() {
 
         luckyNumber = random.nextInt(100);
-        System.out.println("next lucky number is"+luckyNumber);
+        System.out.println("next lucky number is" + luckyNumber);
         userList.put(nric, 1);
 
     }
 
-    public boolean checkDate(){
+    public boolean checkDate() {
 
 
         Calendar cal = Calendar.getInstance();
         int day = cal.get(Calendar.DAY_OF_MONTH);
 
-        System.out.println("Current date"+ current);
-        System.out.println("Check date"+day);
+        System.out.println("Current date" + current);
+        System.out.println("Check date" + day);
 
-        if(current == day){
+        if (current == day) {
             return true;
-        }else {
+        } else {
             return false;
         }
 
