@@ -28,7 +28,7 @@ public class ControllerServlet extends HttpServlet {
         int guessInt = Integer.parseInt(guess);
 
         int result = Guess.getInstance().guess(nric, guessInt);
-        System.out.println("res"+result);
+        System.out.println("res" + result);
 
         if (result == 0) {
             request.setAttribute("guess", guess);
@@ -48,10 +48,9 @@ public class ControllerServlet extends HttpServlet {
                 System.out.println("higher");
 
 
-
             } else if (result < 0) {
 
-                request.setAttribute("try","lower");
+                request.setAttribute("try", "lower");
                 System.out.println("lower");
 
             }
