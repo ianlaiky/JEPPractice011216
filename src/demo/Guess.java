@@ -112,6 +112,7 @@ public class Guess {
         System.out.println("Check date" + day);
 
         if (current == day) {
+            current = day;
             return true;
         } else {
             return false;
